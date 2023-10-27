@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>rigel_ros</name>
+  <version>1.0.0</version>
+  <description>
+    ICE9 Scout ROS package
+  </description>
+  <maintainer email="anthony.zyjiang.github@outlook.com">Zhengyi Jiang</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>scout_base</exec_depend>
+  <exec_depend>lslidar_driver</exec_depend>
+  <exec_depend>realsens2_camera</exec_depend>
+  <exec_depend>velodyne</exec_depend>
+  <exec_depend>rigel_description</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

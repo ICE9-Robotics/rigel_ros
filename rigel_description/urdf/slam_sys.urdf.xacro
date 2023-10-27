@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="LSC16">
+    <xacro:macro name="ice9_slam" params="*origin parent:=base_link name:=slam_sys">
+
+        <joint name="${name}_base_mount_joint" type="fixed">
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${name}_base_link" />
+        </joint>
+
+        <link name="${name}_base_link">
+            <visual>
+                <geometry>
+                    <mesh filename="package://rigel_description/meshes/slam_sys_base.obj" />
+                </geometry>
+            </visual>
+            <collision>
+                <geometry>
+                    <sphere radius="0" />
+                </geometry>
+            </collision>
+        </link>
+
+        <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro" />
+    <xacro:VLP-16 parent="${name}_base_link" name="velodyne">
+        <origin xyz="0 0 0" rpy="0 0 -${M_PI/2}" />
+    </xacro:VLP-16>
+
+        <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro" />
+    <xacro:sensor_d435i parent="${name}_base_link" name="realsense">
+        <origin xyz="0 0.06185 -0.0495" rpy="0 0 ${M_PI/2}" />
+    </xacro:sensor_d435i>
+
+        <xacro:include filename="$(find lslidar_description)/urdf/LSC16.urdf.xacro" />
+        <xacro:LSC16 parent="${name}_base_link" name="lslidar">
+            <origin xyz="0 -0.055 -0.070" rpy="-${M_PI/2} 0 ${M_PI}" />
+        </xacro:LSC16>
+    </xacro:macro>
+</robot>
