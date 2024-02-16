@@ -6,10 +6,10 @@
   <description>
     ICE9 Scout description package
   </description>
-  <maintainer email="anthony.zyjiang.github@outlook.com">Zhengyi Jiang</maintainer>
+  <maintainer email="anthony.jiang.github@outlook.com">Zhengyi Jiang</maintainer>
   <license>BSD</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
 
   <exec_depend>scout_description</exec_depend>
   <exec_depend>realsense2_description</exec_depend>
@@ -17,6 +17,5 @@
   <exec_depend>lslidar_description</exec_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
   </export>
 </package>

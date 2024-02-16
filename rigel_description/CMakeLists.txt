@@ -1,8 +1,13 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.3)
 project(rigel_description)
-find_package(ament_cmake REQUIRED)
 
-install(DIRECTORY launch meshes urdf
-  DESTINATION share/${PROJECT_NAME})
+find_package(catkin REQUIRED COMPONENTS roslaunch)
 
-ament_package()
+catkin_package()
+
+roslaunch_add_file_check(launch)
+
+install(
+  DIRECTORY launch meshes urdf rviz
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)

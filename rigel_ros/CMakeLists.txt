@@ -1,8 +1,13 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.3)
 project(rigel_ros)
-find_package(ament_cmake REQUIRED)
 
-install(DIRECTORY launch params scripts rviz
-  DESTINATION share/${PROJECT_NAME})
+find_package(catkin REQUIRED COMPONENTS)
 
-ament_package()
+catkin_package()
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+
+install(DIRECTORY launch params rviz scripts
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

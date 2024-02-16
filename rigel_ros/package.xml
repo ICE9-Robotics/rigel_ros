@@ -9,7 +9,7 @@
   <maintainer email="anthony.zyjiang.github@outlook.com">Zhengyi Jiang</maintainer>
   <license>BSD</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
 
   <exec_depend>scout_base</exec_depend>
   <exec_depend>lslidar_driver</exec_depend>
@@ -18,6 +18,5 @@
   <exec_depend>rigel_description</exec_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
   </export>
 </package>

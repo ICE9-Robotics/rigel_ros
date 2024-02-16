@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
 
-<robot name="scout_mini"
+<robot name="rigel"
     xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:property name="M_PI" value="3.141592653" />
+    <xacro:property name="PI" value="3.141592653" />
+    <xacro:property name="rail_top_offset" value="0.069" />
+    <xacro:property name="rail_front_offset" value="0.175" />
 
-    <xacro:include filename="$(find scout_description)/urdf/scout_mini.xacro" />
+
+    <xacro:include filename="$(find scout_description)/urdf/scout_mini.urdf.xacro" />
+
 
     <xacro:include filename="$(find rigel_description)/urdf/slam_sys.urdf.xacro"/>
     <xacro:ice9_slam parent="base_link" name="slamsys">
-        <origin xyz="0 0.161438 ${0.335382 + wheel_radius}" rpy="0 0 0" />
+        <origin xyz="${-0.002 + rail_front_offset} 0 ${0.17 + rail_top_offset}" rpy="0 0 ${-PI/2}" />
     </xacro:ice9_slam>
 
 </robot>

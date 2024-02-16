@@ -1,0 +1,9 @@
+port : "/dev/microstrain_main"
+imu_frame_id : "microstrain_link"
+filter_frame_id : "microstrain_link"
+filter_child_frame_id : "microstrain_link"
+
+# (All, except GQ7, CV7, -10, and -15 products) Heading Source 0 = None, 1 = magnetic, 2 = GNSS velocity (note: see manual for limitations)  
+filter_heading_source : 0
+# (All, except -10, and -15 products) Declination Source 1 = None, 2 = magnetic model, 3 = manual
+filter_declination_source : 1
