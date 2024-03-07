@@ -13,7 +13,7 @@
 
   <include file="$(find rigel_description)/launch/rigel_description.launch" />
 
-  <include file="$(find rigel_ros)/launch/include/fast_lio.launch" />
+  <!-- <include file="$(find rigel_ros)/launch/include/fast_lio.launch" /> -->
 
   <group if="$(arg rviz)">
     <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find rigel_ros)/rviz/rigel.rviz" />

@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
-        - /Odometry1/Status1
         - /Odometry1/Shape1
         - /TF1/Frames1
       Splitter Ratio: 0.5
@@ -360,9 +359,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5303975939750671
+      Pitch: 0.3403977155685425
       Target Frame: <Fixed Frame>
-      Yaw: 5.533579349517822
+      Yaw: 3.618581771850586
     Saved: ~
 Window Geometry:
   Displays:

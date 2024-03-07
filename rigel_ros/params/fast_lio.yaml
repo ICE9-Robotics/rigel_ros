@@ -7,14 +7,14 @@ common:
 
 preprocess:
     lidar_type: 2                # 1 for Livox serials LiDAR, 2 for Velodyne LiDAR, 3 for ouster LiDAR, 
-    scan_line: 32
+    scan_line: 16
     scan_rate: 10                # only need to be set for velodyne, unit: Hz,
     timestamp_unit: 2            # the unit of time/t field in the PointCloud2 rostopic: 0-second, 1-milisecond, 2-microsecond, 3-nanosecond.
     blind: 2
 
 mapping:
-    acc_cov: 0.000001
-    gyr_cov: 0.000001
+    acc_cov: 0.1
+    gyr_cov: 0.1
     b_acc_cov: 0.0001
     b_gyr_cov: 0.0001
     fov_degree:    360
