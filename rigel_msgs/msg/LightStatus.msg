@@ -1,0 +1,3 @@
+uint8 front_light_strength
+uint8 rear_light_strength
+uint8 pan_tilt_light_strength
