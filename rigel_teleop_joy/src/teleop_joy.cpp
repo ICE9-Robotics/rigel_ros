@@ -97,7 +97,10 @@ namespace teleop_joy
         ROS_INFO_NAMED("TeleopJoy", "Teleop enable button %i.", pimpl_->enable_button);
         ROS_INFO_COND_NAMED(pimpl_->enable_turbo_button >= 0, "TeleopJoy",
                             "Turbo on button %i.", pimpl_->enable_turbo_button);
-
+        ROS_INFO_COND_NAMED(pimpl_->enable_button_pan_tilt_pos >= 0, "TeleopJoy",
+                            "Pan tilt position command enable button %i.", pimpl_->enable_button_pan_tilt_pos);
+        ROS_INFO_COND_NAMED(pimpl_->enable_button_pan_tilt_pos <= 0, "TeleopJoy",
+                            "Pan tilt position command enable button not set, position commands will be ignored.");
         for (std::map<std::string, int>::iterator it = pimpl_->axis_linear_map.begin();
              it != pimpl_->axis_linear_map.end(); ++it)
         {
@@ -106,15 +109,7 @@ namespace teleop_joy
             ROS_INFO_COND_NAMED(pimpl_->enable_turbo_button >= 0, "TeleopJoy",
                                 "Linear axis %s turbo is scale %f.", it->first.c_str(), pimpl_->scale_linear_map["turbo"][it->first]);
         }
-
-        for (std::map<std::string, double>::iterator it = pimpl_->offset_linear_map.begin();
-             it != pimpl_->offset_linear_map.end(); ++it)
-        {
-            ROS_INFO_NAMED("TeleopJoy", "Linear axis %s on %i at scale %f with offset %f.",
-                           it->first.c_str(), pimpl_->axis_linear_map[it->first], pimpl_->scale_linear_map["normal"][it->first], it->second);
-        }
-
-
+        
         for (std::map<std::string, int>::iterator it = pimpl_->axis_angular_map.begin();
              it != pimpl_->axis_angular_map.end(); ++it)
         {
