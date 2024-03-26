@@ -1,0 +1,39 @@
+axis_linear:
+  forwards: 8
+  backwards: 9
+  pan_vel: 0
+  tilt_vel: 1
+  pan_pos: 4
+  tilt_pos: 5
+scale_linear:
+  forwards: -0.4
+  backwards: 0.4
+  pan_vel: 40
+  tilt_vel: 40
+  pan_pos: 1
+  tilt_pos: 1
+scale_linear_turbo:
+  forwards: -0.7
+  backwards: 0.7
+  pan_vel: 60
+  tilt_vel: 60
+  pan_pos: 1
+  tilt_pos: 1
+offset_linear:
+  forwards: -1
+  backwards: -1
+  pan_vel: 0
+  tilt_vel: 0
+  pan_pos: 0
+  tilt_pos: 0
+axis_angular:
+  yaw: 2
+scale_angular:
+  yaw: 0.5
+scale_angular_turbo:
+  yaw: 0.5
+offset_angular:
+  yaw: 0  
+enable_button: 21
+enable_turbo_button: 23
+enable_button_pan_tilt_pos: 0
