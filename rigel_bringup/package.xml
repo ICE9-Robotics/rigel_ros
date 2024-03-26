@@ -4,7 +4,7 @@
   <name>rigel_bringup</name>
   <version>1.0.0</version>
   <description>
-    ICE9 Scout ROS package
+    Bringup package for Rigel robot
   </description>
   <maintainer email="anthony.zyjiang.github@outlook.com">Zhengyi Jiang</maintainer>
   <license>BSD</license>
@@ -12,10 +12,16 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <exec_depend>scout_base</exec_depend>
+  <exec_depend>rigel_description</exec_depend>
+  <exec_depend>rigel_teleop_joy</exec_depend>
+
   <exec_depend>lslidar_driver</exec_depend>
   <exec_depend>realsens2_camera</exec_depend>
   <exec_depend>velodyne</exec_depend>
-  <exec_depend>rigel_description</exec_depend>
+  <exec_depend>microstrain_inertial_driver</exec_depend>
+  <exec_depend>fast_lio</exec_depend>
+  
+  <exec_depend>dynamixel_pan_tilt_driver</exec_depend>
 
   <export>
   </export>

@@ -1,7 +1,7 @@
 <launch>
     <arg name="rviz" default="false" />
 
-    <rosparam command="load" file="$(find rigel_ros)/params/fast_lio.yaml" />
+    <rosparam command="load" file="$(find rigel_bringup)/params/fast_lio.yaml" />
 
     <param name="feature_extract_enable" type="bool" value="0"/>
     <param name="point_filter_num" type="int" value="4"/>

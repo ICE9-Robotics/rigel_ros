@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="dynamixel_pan_tilt_driver" type="dynamixel_pan_tilt_node" name="pan_tilt_node" output="screen">
+    <rosparam file="$(find rigel_bringup)/config/pan_tilt_cam.yaml" command="load" />
+  </node>
+</launch>

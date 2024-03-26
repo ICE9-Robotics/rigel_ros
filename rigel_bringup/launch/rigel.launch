@@ -1,21 +1,21 @@
 <launch>
   <arg name="rviz" default="false" />
 
-  <include file="$(find rigel_ros)/launch/include/scout_mini.launch" /> 
-   
-  <include file="$(find rigel_ros)/launch/include/velodyne_vlp16.launch"/>
-
-  <include file="$(find rigel_ros)/launch/include/lslidar_c16.launch" />
-
-  <include file="$(find rigel_ros)/launch/include/realsense_d435i.launch" />
-
-  <include file="$(find rigel_ros)/launch/include/microstrain_imu.launch" />
-
+  <include file="$(find rigel_bringup)/launch/include/scout_mini.launch" /> 
   <include file="$(find rigel_description)/launch/rigel_description.launch" />
 
-  <!-- <include file="$(find rigel_ros)/launch/include/fast_lio.launch" /> -->
+  <!-- SLAM Payloads -->
+  <include file="$(find rigel_bringup)/launch/slam_payloads/velodyne_vlp16.launch"/>
+  <include file="$(find rigel_bringup)/launch/slam_payloads/lslidar_c16.launch" />
+  <include file="$(find rigel_bringup)/launch/slam_payloads/realsense_d435i.launch" />
+  <include file="$(find rigel_bringup)/launch/slam_payloads/microstrain_imu.launch" />
+  <!-- <include file="$(find rigel_bringup)/launch/slam_payloads/fast_lio.launch" /> -->
+
+  <!-- Other Payloads -->
+  <include file="$(find rigel_bringup)/launch/other_payloads/pan_tilt_cam.launch" />
+
 
   <group if="$(arg rviz)">
-    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find rigel_ros)/rviz/rigel.rviz" />
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find rigel_bringup)/rviz/rigel.rviz" />
   </group>
 </launch>
