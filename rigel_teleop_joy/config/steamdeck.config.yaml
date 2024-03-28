@@ -10,22 +10,22 @@ scale_linear:
   backwards: 0.4
   pan_vel: 40
   tilt_vel: 40
-  pan_pos: 1
-  tilt_pos: 1
+  pan_pos: -0.5
+  tilt_pos: 0.5
 scale_linear_turbo:
   forwards: -0.7
   backwards: 0.7
   pan_vel: 60
   tilt_vel: 60
-  pan_pos: 1
-  tilt_pos: 1
+  pan_pos: -0.5
+  tilt_pos: 0.5
 offset_linear:
   forwards: -1
   backwards: -1
   pan_vel: 0
   tilt_vel: 0
-  pan_pos: 0
-  tilt_pos: 0
+  pan_pos: -1
+  tilt_pos: 1
 axis_angular:
   yaw: 2
 scale_angular:
