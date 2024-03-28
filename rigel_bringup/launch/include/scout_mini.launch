@@ -16,7 +16,7 @@
     <arg name="odom_topic_name" default="odometry/wheel" />
     <arg name="pub_tf" default="false" />
 
-    <node name="setup_can" pkg="rigel_ros" type="setup_can.sh" />
+    <node name="setup_can" pkg="rigel_bringup" type="setup_can.sh" />
     <node name="scout_base_node" pkg="scout_base" type="scout_base_node" output="screen">
         <param name="is_scout_mini" type="bool" value="$(arg is_scout_mini)" />
         <param name="is_scout_omni" type="bool" value="$(arg is_scout_omni)" />

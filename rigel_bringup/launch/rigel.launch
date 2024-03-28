@@ -15,7 +15,6 @@
   <include file="$(find rigel_bringup)/launch/other_payloads/pan_tilt_arm.launch" />
   <include file="$(find rigel_bringup)/launch/other_payloads/cameras.launch" />
 
-
   <group if="$(arg rviz)">
     <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find rigel_bringup)/rviz/rigel.rviz" />
   </group>
