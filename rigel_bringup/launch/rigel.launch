@@ -12,7 +12,8 @@
   <!-- <include file="$(find rigel_bringup)/launch/slam_payloads/fast_lio.launch" /> -->
 
   <!-- Other Payloads -->
-  <include file="$(find rigel_bringup)/launch/other_payloads/pan_tilt_cam.launch" />
+  <include file="$(find rigel_bringup)/launch/other_payloads/pan_tilt_arm.launch" />
+  <include file="$(find rigel_bringup)/launch/other_payloads/cameras.launch" />
 
 
   <group if="$(arg rviz)">
