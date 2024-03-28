@@ -1,4 +1,4 @@
-device_name: /dev/ttyUSB0
+device_name: /dev/rigel/u2d2
 baud_rate: 1000000
 addr_indirect_address_data_offset: 40
 enable_present_velocity: True
