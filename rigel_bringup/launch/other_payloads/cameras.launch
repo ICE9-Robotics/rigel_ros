@@ -1,7 +1,7 @@
 <launch>
   <!-- 1920x1080, 1280x720, 1024x576, 960x720, 848x480, 800x600 -->
   <node name="pan_tilt_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
-    <param name="video_device" value="/dev/rigel/arducam_UC684_2.2" />
+    <param name="video_device" value="/dev/rigel/arducam_UC684_2.3" />
     <param name="image_width" value="800" />
     <param name="image_height" value="600" />
     <param name="pixel_format" value="mjpeg" />
@@ -11,7 +11,7 @@
     <param name="framerate" value="20" />
   </node>
   <node name="rear_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
-    <param name="video_device" value="/dev/rigel/arducam_UC684_2.3" />
+    <param name="video_device" value="/dev/rigel/arducam_UC684_3.2" />
     <param name="image_width" value="800" />
     <param name="image_height" value="600" />
     <param name="pixel_format" value="mjpeg" />

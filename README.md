@@ -17,7 +17,7 @@ ROS package for the Rigel robot
 
 # Install
 ```
-sudo apt install ros-$ROS_DISTRO-velodyne ros-$ROS_DISTRO-velodyne-description ros-$ROS_DISTRO-realsense2-camera ros-$ROS_DISTRO-realsense2-description ros-$ROS_DISTRO-microstrain-inertial-driver
+sudo apt install ros-$ROS_DISTRO-velodyne ros-$ROS_DISTRO-velodyne-description ros-$ROS_DISTRO-realsense2-camera ros-$ROS_DISTRO-realsense2-description ros-$ROS_DISTRO-microstrain-inertial-driver ros-$ROS_DISTRO-rosserial ros-$ROS_DISTRO-usb-cam
 mkdir -p ~/rigel_ws/src
 cd ~/rigel_ws/src
 
@@ -27,6 +27,7 @@ git clone https://github.com/agilexrobotics/ugv_sdk.git
 git clone https://github.com/agilexrobotics/scout_ros.git
 git clone -b C16_V4.0 https://github.com/Lslidar/Lslidar_ROS1_driver.git
 git clone -b ros https://github.com/ICE9-Robotics/lslidar_description.git
+git clone https://github.com/AnthonyZJiang/scout_diagnostics.git
 
 # fast_lio
 git clone https://github.com/hku-mars/FAST_LIO.git --recurse-submodules
@@ -52,6 +53,8 @@ Finally, set the IP Address of the ethernet interface of the onboard computer to
 ```
 roslaunch rigel_ros rigel.launch rviz:=true
 ```
+
+# 3D reconstruction
 
 # To view 3D reconstruction
 ```

@@ -12,6 +12,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <exec_depend>scout_base</exec_depend>
+  <exec_depend>scout_diagnostics</exec_depend>
   <exec_depend>rigel_description</exec_depend>
   <exec_depend>rigel_teleop_joy</exec_depend>
 
@@ -20,6 +21,8 @@
   <exec_depend>velodyne</exec_depend>
   <exec_depend>microstrain_inertial_driver</exec_depend>
   <exec_depend>fast_lio</exec_depend>
+  <exec_depend>usb_cam</exec_depend>
+  <exec_depend>rosserial_python</exec_depend>
   
   <exec_depend>dynamixel_pan_tilt_driver</exec_depend>
 

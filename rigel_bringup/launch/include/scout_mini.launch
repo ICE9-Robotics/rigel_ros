@@ -28,4 +28,6 @@
         <param name="pub_tf" type="bool" value="$(arg pub_tf)" />
     </node>
 
+    <node name="scout_diagnostics_node" pkg="scout_diagnostics" type="scout_diagnostics_node" />
+
 </launch>
