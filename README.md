@@ -54,6 +54,13 @@ Finally, set the IP Address of the ethernet interface of the onboard computer to
 roslaunch rigel_ros rigel.launch rviz:=true
 ```
 
+# Control scheme
+![control_scheme](doc/asset/rigel_control_scheme.jpg)
+
+Note:
+1. "Enabl" or "Enable with turbo" is required for all controls
+2. The left touch pad for "Pan tilt position" needs to be pressed with some pressure (to trigger a click) to register the control.
+
 # 3D reconstruction
 
 # To view 3D reconstruction
