@@ -4,7 +4,7 @@ ROS package for the Rigel robot
 # Dependencies
 - Standard libraries
     - libasio
-- ROS packages (hardware)
+- ROS packages
     - [scout_ros](https://github.com/agilexrobotics/scout_ros)
     - [ugv_sdk](https://github.com/agilexrobotics/ugv_sdk)
     - [velodyne](https://github.com/ros-drivers/velodyne)
@@ -12,7 +12,8 @@ ROS package for the Rigel robot
     - [Lslidar_ROS1_driver/C16_V4.0](https://github.com/Lslidar/Lslidar_ROS1_driver/tree/C16_V4.0)
     - [lslidar_description/ros](https://github.com/ICE9-Robotics/lslidar_description)
     - [microstrain_inertial](https://github.com/LORD-MicroStrain/microstrain_inertial)
-- ROS packages (software)
+    - [dynamixel_pan_tilt](https://github.com/AnthonyZJiang/dynamixel_pan_tilt.git)
+- ROS packages (optional)
     - [fast_lio](https://github.com/hku-mars/FAST_LIO/tree/main)
 
 # Install
@@ -21,13 +22,14 @@ sudo apt install ros-$ROS_DISTRO-velodyne ros-$ROS_DISTRO-velodyne-description r
 mkdir -p ~/rigel_ws/src
 cd ~/rigel_ws/src
 
-# ros pkg hardware
+# ros pkg
 git clone git@github.com:ICE9-Robotics/rigel.git #private repo, requires ssh
 git clone https://github.com/agilexrobotics/ugv_sdk.git
 git clone https://github.com/agilexrobotics/scout_ros.git
 git clone -b C16_V4.0 https://github.com/Lslidar/Lslidar_ROS1_driver.git
 git clone -b ros https://github.com/ICE9-Robotics/lslidar_description.git
 git clone https://github.com/AnthonyZJiang/scout_diagnostics.git
+git clone https://github.com/AnthonyZJiang/dynamixel_pan_tilt.git
 
 # fast_lio
 git clone https://github.com/hku-mars/FAST_LIO.git --recurse-submodules
