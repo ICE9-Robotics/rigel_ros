@@ -49,7 +49,7 @@ catkin_make
 echo "source ~/rigel_ws/devel/setup.sh" >> .bashrc
 ```
 
-Finally, set the IP Address of the ethernet interface of the onboard computer to 192.168.1.102
+Finally, set the IP Address of the ethernet interface of the onboard computer to 192.168.1.102. Note that this IP address is used to communicate with the Lidars, although it can also be used for ROS_IP.
 
 # Run
 ```
